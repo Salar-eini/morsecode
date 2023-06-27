@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Deployment Tutorial 1</title>
+<link rel="stylesheet" href="/css/app.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.3/angular-route.js"></script>
+<script src="/js/app.js"></script>
+
+</head>
+
+<body style="background: rgb(114, 114, 114);">
+ <div class="login">
+	<h1>English To Morse Translator</h1>
+
+
+    <form action="{{ url_for('morsetoenglish')}}"method="post">
+        <input type="text" name="a" placeholder="Please write a text in English." required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Translate</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+</body>
+</html>
